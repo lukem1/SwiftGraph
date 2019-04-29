@@ -2,8 +2,8 @@
 //  Objects.swift
 //  GraphTheory Shared
 //
-//  Created by Luke M on 4/9/19.
-//  Copyright © 2019 Luke M. All rights reserved.
+//  Created by Luke McGuire on 4/9/19.
+//  Copyright © 2019 Luke McGuire. All rights reserved.
 //
 
 import Foundation
@@ -168,6 +168,50 @@ class Graph
         {
             e.color(sColor: e.strokeColor)
         }
+    }
+    
+    func toAdjacencyMatrix() -> [[Int]]
+    {
+        var matrix = [[Int]]()
+        for v1 in vertices
+        {
+            var row = [Int]()
+            let v1Edges = findVertexEdges(v: v1)
+            for v2 in vertices
+            {
+                var c = 0
+                for e in v1Edges
+                {
+                    if e.directed
+                    {
+                        if e.vertices.1.id == v2.id
+                        {
+                            c += 1;
+                        }
+                    }
+                    else
+                    {
+                        if v1.id == v2.id
+                        {
+                            if e.vertices.0.id == v2.id && e.vertices.1.id == v2.id
+                            {
+                                c += 1
+                            }
+                        }
+                        else
+                        {
+                            if e.vertices.0.id == v2.id || e.vertices.1.id == v2.id
+                            {
+                                c += 1
+                            }
+                        }
+                    }
+                }
+                row.append(c)
+            }
+            matrix.append(row)
+        }
+        return matrix
     }
 }
 
