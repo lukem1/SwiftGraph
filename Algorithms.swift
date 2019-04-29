@@ -2,8 +2,8 @@
 //  Algorithms.swift
 //  GraphTheory
 //
-//  Created by Luke M on 4/16/19.
-//  Copyright © 2019 Luke M. All rights reserved.
+//  Created by Luke McGuire on 4/16/19.
+//  Copyright © 2019 Luke McGuire. All rights reserved.
 //
 
 import Foundation
