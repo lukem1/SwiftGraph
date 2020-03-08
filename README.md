@@ -8,16 +8,16 @@ Also includes the GameScene.swift file built for macOS Swift applications that a
 
 # Usage
 Modes are selected using the keyboard
-# euler (access by pressing "E")
+### euler (access by pressing "E")
 Select a vertex by clicking on it and Hierholzer's algorithm will be run on the graph
 If a Euler cycle or path is found, it will be animated
-# modify (access by pressing "M")
+### modify (access by pressing "M")
 Create vertices by clicking on empty space
 Create edges by clicking and dragging from one vertex to another
 Delete edges or vertices by clicking on it then pressing delete on the keyboard
-# manipulate (access by pressing "S")
+### manipulate (access by pressing "S")
 Click and drag vertices to move them around
-# view (access by pressing "V")
+### view (access by pressing "V")
 Click on vertices/edges to display information about them
-# Reset graph coloring by pressing "R" on the keyboard
+### Reset graph coloring by pressing "R" on the keyboard
 
